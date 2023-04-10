@@ -22,7 +22,7 @@ public class bbddProperties {
 			propiedades = new Properties();
 		    
 			try {
-				File file = new File("./src/es/jepm/usersGestion/properties/bbdd_properties.properties");
+				File file = new File("./src/es/jepm/ddbbGestion/properties/bbdd_properties.properties");
 				propiedades.load(new FileReader(file));
 			
 			} catch (FileNotFoundException e) {

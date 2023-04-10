@@ -10,7 +10,7 @@ public class Main {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 
-		Connection connection = ConnectionManager.realizeConnection(); 
+		Connection connection = ConnectionManager.getConnection();
 		
 		PrincipalWindow.main(args);
 		

@@ -1,6 +1,6 @@
 package es.jepm.ddbbGestion.model;
 
-public class Student {
+public class PersonModel {
 	private int id;
 	private String name;
 	private String lastName;
@@ -9,14 +9,16 @@ public class Student {
 	private String address;
 	private String email;
 	private String phoneN;
+	private int gender;
+	private byte[] image;
 	
 	/**
 	 * Constructor por defecto
 	 */
-	public Student() {
+	public PersonModel() {
 		super();
 	}
-	
+
 	/**
 	 * @param id
 	 * @param name
@@ -26,9 +28,11 @@ public class Student {
 	 * @param address
 	 * @param email
 	 * @param phoneN
+	 * @param gender
+	 * @param image
 	 */
-	public Student(int id, String name, String lastName, String lastName2, String dni, String address, String email,
-			String phoneN) {
+	public PersonModel(int id, String name, String lastName, String lastName2, String dni, String address, String email,
+			String phoneN, int gender, byte[] image) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -38,6 +42,8 @@ public class Student {
 		this.address = address;
 		this.email = email;
 		this.phoneN = phoneN;
+		this.gender = gender;
+		this.image = image;
 	}
 
 	/**
@@ -152,6 +158,39 @@ public class Student {
 		this.phoneN = phoneN;
 	}
 	
+	
+	/**
+	 * @return the gender
+	 */
+	public int getGender() {
+		return gender;
+	}
+
+	/**
+	 * @param gender the gender to set
+	 */
+	public void setGender(int gender) {
+		this.gender = gender;
+	}
+
+	/**
+	 * @return the image
+	 */
+	public byte[] getImage() {
+		return image;
+	}
+
+
+
+	/**
+	 * @param image the image to set
+	 */
+	public void setImage(byte[] image) {
+		this.image = image;
+	}
+
+
+
 	@Override
 	public String toString() {
 		return "Student [id=" + id + ", name=" + name + ", lastName=" + lastName + ", lastName2=" + lastName2 + ", dni="

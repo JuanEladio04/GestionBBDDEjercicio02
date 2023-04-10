@@ -11,6 +11,7 @@ import java.awt.GridBagConstraints;
 import java.awt.Font;
 import javax.swing.JTabbedPane;
 import java.awt.Insets;
+import java.awt.Color;
 
 public class PrincipalWindow extends JFrame {
 
@@ -38,7 +39,7 @@ public class PrincipalWindow extends JFrame {
 	public PrincipalWindow() {
 		setTitle("Gestion Centro Educativo");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 394, 372);
+		setBounds(100, 100, 509, 405);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -51,6 +52,7 @@ public class PrincipalWindow extends JFrame {
 		contentPane.setLayout(gbl_contentPane);
 		
 		JLabel lblNewLabel = new JLabel("Gestion Centro Educativo");
+		lblNewLabel.setForeground(new Color(0, 128, 192));
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 20));
 		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
 		gbc_lblNewLabel.insets = new Insets(0, 0, 5, 0);
@@ -64,7 +66,9 @@ public class PrincipalWindow extends JFrame {
 		gbc_gestionWindow.gridx = 0;
 		gbc_gestionWindow.gridy = 1;
 		StudentGestionPanel pnl1 = new StudentGestionPanel();
-		gestionWindow.add("Estudiante", pnl1);
+		ProfesorGestionPanel pnl2 = new ProfesorGestionPanel();
+		gestionWindow.add("Estudiante", pnl1); 
+		gestionWindow.add("Profesor", pnl2);
 		contentPane.add(gestionWindow, gbc_gestionWindow);
 	}
 }
